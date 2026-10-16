@@ -1,0 +1,82 @@
+# Slide decks listed on index.html, in the order shown.
+#
+# Adding a new deck
+#   1. Put the PDF in this folder, e.g. "Lab 7 - slides.pdf".
+#   2. Run:  python build.py --add
+#      This appends a starter entry below for every PDF that is not listed yet
+#      and rebuilds index.html. Check the new entry, adjust it, then run:
+#            python build.py
+#   (Or copy one of the [[deck]] blocks below by hand and run `python build.py`.)
+#
+# Fields
+#   id        short name used in links, e.g. index.html#lab7 (letters, digits, -)
+#   group     list heading the deck appears under (default "Labs")
+#   number    optional; shown as 01, 02, ... and used for the "Lab 7" label
+#   label     optional; overrides the small label above the title
+#   title     deck title
+#   subtitle  optional one-line description
+#   date      optional, YYYY-MM-DD
+#   file      PDF path, relative to this folder
+#   default   optional; set to true to open the page on this deck
+#             (otherwise it opens on the last deck of the first group)
+
+[[deck]]
+id = "lab1"
+group = "Labs"
+number = 1
+title = "Java Refresher and the Dispatch Board"
+subtitle = "Setup, primitives, arrays, loops, and static methods"
+date = 2026-08-23
+file = "Lab 1 - slides.pdf"
+
+[[deck]]
+id = "lab2"
+group = "Labs"
+number = 2
+title = "Objects, References, and Encapsulation"
+subtitle = "Building the dispatch board"
+date = 2026-08-30
+file = "Lab 2 - slides.pdf"
+
+[[deck]]
+id = "lab3"
+group = "Labs"
+number = 3
+title = "Null, Constructors, and Shared State"
+subtitle = "When a reference points at nothing"
+date = 2026-09-12
+file = "Lab 3 - slides.pdf"
+
+[[deck]]
+id = "lab4"
+group = "Labs"
+number = 4
+title = "Inheritance, Abstract Classes, and Interfaces"
+subtitle = "One hierarchy for drivers and riders"
+date = 2026-09-20
+file = "Lab 4 - slides.pdf"
+
+[[deck]]
+id = "lab5"
+group = "Labs"
+number = 5
+title = "Generics, MyArrayList, and Variance"
+subtitle = "Generic classes, resizable lists, and variance"
+date = 2026-09-28
+file = "Lab 5 - slides.pdf"
+
+[[deck]]
+id = "lab6"
+group = "Labs"
+number = 6
+title = "Debugging with jdb and Exception Handling"
+subtitle = "Breakpoints, checked vs. unchecked, custom exceptions"
+date = 2026-10-05
+file = "Lab 6 - slides.pdf"
+
+[[deck]]
+id = "midterm"
+group = "Exam prep"
+title = "Midterm Laptop Check"
+subtitle = "Confirm submit-server access on the lab laptop"
+file = "Midterm Laptop Setting Guide.pdf"
