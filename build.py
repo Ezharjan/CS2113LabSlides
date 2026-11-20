@@ -280,7 +280,9 @@ def stamp_assets(page: str) -> str:
         path = ROOT / asset
         if not path.is_file():
             raise BuildError(f"{asset} is missing")
-        digest = hashlib.sha1(path.read_bytes()).hexdigest()[:8]
+        # Hash with LF line endings so a Windows (CRLF) checkout gets the same stamp.
+        content = path.read_bytes().replace(b"\r\n", b"\n")
+        digest = hashlib.sha1(content).hexdigest()[:8]
         page = re.sub(rf'{re.escape(asset)}(\?v=[0-9a-f]*)?"', f'{asset}?v={digest}"', page)
     return page
 

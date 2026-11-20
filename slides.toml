@@ -1,7 +1,7 @@
 # Slide decks listed on index.html, in the order shown.
 #
 # Adding a new deck
-#   1. Put the PDF in this folder, e.g. "Lab 7 - slides.pdf".
+#   1. Put the PDF in this folder, e.g. "Lab 10 - slides.pdf".
 #   2. Run:  python build.py --add
 #      This appends a starter entry below for every PDF that is not listed yet
 #      and rebuilds index.html. Check the new entry, adjust it, then run:
@@ -73,6 +73,33 @@ title = "Debugging with jdb and Exception Handling"
 subtitle = "Breakpoints, checked vs. unchecked, custom exceptions"
 date = 2026-10-05
 file = "Lab 6 - slides.pdf"
+
+[[deck]]
+id = "lab7"
+group = "Labs"
+number = 7
+title = "From Console to GUI — The Zone Graph and Design Patterns"
+subtitle = "Graph from CSV, dependency injection, String zones, Swing"
+date = 2026-10-25
+file = "Lab 7 - slides.pdf"
+
+[[deck]]
+id = "lab8"
+group = "Labs"
+number = 8
+title = "Concurrency in Swing — From a Frozen Window to a Thread Pool"
+subtitle = "The EDT, threads, deadlocks and races, wait/notifyAll, pools and futures"
+date = 2026-11-01
+file = "Lab 8 - slides.pdf"
+
+[[deck]]
+id = "lab9"
+group = "Labs"
+number = 9
+title = "Streams, Sockets, and a Multi-Client Server"
+subtitle = "From a chat server (Activity) to a ride-share driver app (Assignment)"
+date = 2026-11-15
+file = "Lab 9 - slides.pdf"
 
 [[deck]]
 id = "midterm"

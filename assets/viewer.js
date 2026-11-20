@@ -405,6 +405,19 @@ for (const deck of decks) {
   });
 }
 
+// The list starts below the page header. Tell the stylesheet where (see .decks in
+// style.css), so a long list fits in the window instead of running past its bottom.
+function fitListToWindow() {
+  const top = deckNav.parentElement.getBoundingClientRect().top + window.scrollY;
+  root.style.setProperty("--decks-top", `${Math.round(top)}px`);
+}
+fitListToWindow();
+window.addEventListener("resize", () => {
+  fitListToWindow();
+  if (state.deck) revealInList(state.deck.el);
+});
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitListToWindow);
+
 // Keep the selected deck visible when the list scrolls on its own (long lists).
 function revealInList(el) {
   if (stacked.matches || deckNav.scrollHeight <= deckNav.clientHeight + 1) return;
